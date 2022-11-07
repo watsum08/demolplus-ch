@@ -1,12 +1,12 @@
-import { Box, Container } from "@chakra-ui/react";
 import LandingSection from "./sections/LandingSection";
+import NextSection from "./sections/NextSection";
 
 const MainContent = () => {
   return (
     <main>
       <LandingSection />
-      
-      <Container maxW="1600px"></Container>
+
+      <NextSection />
     </main>
   );
 };
