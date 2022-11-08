@@ -24,3 +24,8 @@ header {
     background: black;
   }
 } */
+
+@keyframes slideDownAnimation {
+  from {color: white;}
+  to {color: transparent;}
+}

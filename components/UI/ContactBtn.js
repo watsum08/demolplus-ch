@@ -7,14 +7,15 @@ const ContactBtn = (props) => {
         <Image
           src={props.img}
           alt={props.name}
-          w="72px"
-          mb={3}
+          w={{ base: "48px", md: "72px"}}
+          m="auto"
+          mb={{ base: 2, md: 3 }}
           bg="transparent"
         />
         <TagLabel textAlign="center" bg="transparent">
           <Text
             fontFamily="'Bebas Neue', cursive"
-            fontSize="18px"
+            fontSize={{ base: "16px", md: "18px" }}
             letterSpacing="2px"
             textTransform="uppercase"
             bg="transparent"

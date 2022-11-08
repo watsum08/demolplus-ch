@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "../components/Header";
 import MainContent from "../components/MainContent";
-import SectionLabel from "../components/UI/SectionLabel";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
 
       <MainContent />
 
-      <footer></footer>
+      <Footer />
     </Box>
   );
 }

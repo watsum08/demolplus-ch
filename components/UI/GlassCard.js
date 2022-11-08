@@ -3,15 +3,14 @@ import SectionLabel from "./SectionLabel";
 
 const GlassCard = (props) => {
   return (
-    <Box w="fit-content" m="auto" mt={props.mt} bg="transparent">
+    <Box
+      m="auto"
+      mt={props.mt}
+      bg="transparent"
+      w={{ base: "90%", md: "fit-content" }}
+    >
       <SectionLabel text="Nos services" />
-      <Box
-        w="fit-content"
-        h="auto"
-        zIndex={100}
-        bgColor="rgba(0, 0, 0, 0.7)"
-        rounded="12px"
-      >
+      <Box h="auto" zIndex={100} bgColor="rgba(0, 0, 0, 0.7)" rounded="12px">
         <List bg="transparent" p={props.gap}>
           <GlassCardItem
             gap={props.gap}
@@ -42,8 +41,14 @@ const GlassCard = (props) => {
 const GlassCardItem = (props) => {
   return (
     <ListItem bg="transparent" mb={props.last ? 0 : props.gap}>
-      <Flex bg="transparent" align="center" color="#fff" fontSize="22px">
-        <Image src="img/GreenCheck.svg" bg="transparent" mr={props.gap} />
+      <Flex
+        bg="transparent"
+        align="center"
+        color="#fff"
+        fontSize={{ base: "18px", lg: "22px" }}
+        lineHeight="24px"
+      >
+        <Image src="img/GreenCheck.svg" bg="transparent" mr={props.gap} w={{ base: "30px", sm: "36px" }} />
         {props.text}
       </Flex>
     </ListItem>

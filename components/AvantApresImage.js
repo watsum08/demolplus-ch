@@ -15,10 +15,23 @@ const AvantApresImage = (props) => {
   };
 
   return (
-    <Box bg="transparent" w="fit-content">
-      <Image src={image} alt={props.name} w="360px" h="auto" />
+    <Box bg="transparent" w="fit-content" m="auto" mb={{ base: 12, lg: 0 }}>
+      <Image
+        src={image}
+        alt={props.name}
+        w={{
+          base: "240px",
+          sm: "360px",
+          md: "400px",
+          lg: "260px",
+          xl: "350px",
+        }}
+        h="auto"
+        transition="all 0.5s"
+        m="auto"
+      />
 
-      <Flex bg="transparent" justify="center" gap={16} mt={4}>
+      <Flex bg="transparent" justify="space-between" mt={4} px={{ base: 0, sm: 8, md: 4}}>
         <Button
           color={image === image1 ? "#fff" : "#727272"}
           bg="transparent"
