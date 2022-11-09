@@ -1,16 +1,18 @@
-import { Text, Tag, Box, TagLabel, Image } from "@chakra-ui/react";
+import { Text, Tag, TagLabel, Img, Link } from "@chakra-ui/react";
 
 const ContactBtn = (props) => {
   return (
     <Tag bg="transparent">
-      <Box pt={3} bg="transparent">
-        <Image
+      <Link pt={3} bg="transparent" href={props.href}>
+        <Img
           src={props.img}
           alt={props.name}
           w={{ base: "48px", md: "72px"}}
           m="auto"
           mb={{ base: 2, md: 3 }}
           bg="transparent"
+          _hover={{ cursor: "pointer", filter: "saturate(200%)" }}
+          _active={{ filter: "saturate(50%) " }}
         />
         <TagLabel textAlign="center" bg="transparent">
           <Text
@@ -23,7 +25,7 @@ const ContactBtn = (props) => {
             {props.name}
           </Text>
         </TagLabel>
-      </Box>
+      </Link>
     </Tag>
   );
 };

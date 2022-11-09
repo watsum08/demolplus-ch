@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap");
 
 html,
 body,
 * {
   padding: 0;
   margin: 0;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   box-sizing: border-box;
 }
 
@@ -26,6 +26,61 @@ header {
 } */
 
 @keyframes slideDownAnimation {
-  from {color: white;}
-  to {color: transparent;}
+  from {
+    color: white;
+  }
+  to {
+    color: transparent;
+  }
+}
+
+@keyframes zoomInAnimation {
+  from {
+    background-size: clamp(600px, 320%, 1920px);
+  }
+  to {
+    background-size: clamp(640px, 350%, 2000px);
+  }
+}
+
+@keyframes fullOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 47.9em) {
+  @keyframes moveHeadingUp {
+    from {
+      margin-top: 64px;
+    }
+    to {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  @keyframes moveHeadingUp {
+    from {
+      margin-top: 128px;
+    }
+    to {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media screen and (min-width: 80em) {
+  @keyframes moveHeadingUp {
+    from {
+      margin-top: 160px;
+    }
+    to {
+      margin-top: 48px;
+    }
+  }
 }

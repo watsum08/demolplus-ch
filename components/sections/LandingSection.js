@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, useBreakpoint } from "@chakra-ui/react";
 import GlassCard from "../UI/GlassCard";
 
 const LandingSection = () => {
@@ -20,25 +20,27 @@ const LandingSection = () => {
       pos="fixed"
       mt={{ base: 28, sm: 32, md: 44 }}
       zIndex={100}
+      animation="zoomInAnimation 1s forwards 1.5s"
     >
       <Heading
         w="full"
         as="h1"
         textAlign="center"
-        fontSize={{ base: "64px", md: "72px", xl: "92px" }}
-        mt={{ base: 6, md: 12 }}
+        fontSize={{ base: "60px", md: "72px", xl: "92px" }}
+        mt={{ base: "64px", md: "128px", xl: "160px" }}
         fontFamily="'Bebas Neue', cursive"
-        letterSpacing="4px"
+        letterSpacing={{ base: "4px", md: "5px", xl: "6px" }}
         color="#F34949"
         textShadow="-1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;"
         bg="transparent"
         zIndex={100}
-        lineHeight="64px"
+        lineHeight={{ base: "60px", md: "72px", xl: "92px" }}
+        animation={`moveHeadingUp 1s forwards 1.5s ease-out`}
       >
         Réalisez vos projets de démolition
       </Heading>
 
-      <GlassCard gap={{ base: 4, md: 6 }} mt={{ base: 2, sm: 4, md: 16 }} />
+      <GlassCard gap={{ base: 3, md: 6 }} mt={{ base: 3, sm: 4, md: 16 }} />
 
       <Box w="32px" m="auto" bg="transparent">
         <ChevronDownIcon

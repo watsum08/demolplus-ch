@@ -9,7 +9,7 @@ import ContactForm from "../ContactForm";
 const NextSection = () => {
   return (
     <PageContainer>
-      <ContentSection>
+      <ContentSection mt={4}>
         <SectionLabel text="Nos réalisations" />
         <Box
           bg="transparent"
@@ -103,6 +103,7 @@ const ContentSection = (props) => {
       p={8}
       px={{ base: 6, sm: 8, md: 12 }}
       mb={props.last ? 0 : 12}
+      mt={props.mt ?? 0}
     >
       {props.children}
     </Box>

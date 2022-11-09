@@ -1,4 +1,4 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Img } from "@chakra-ui/react";
 import ContactBtn from "./UI/ContactBtn";
 
 const Header = () => {
@@ -9,19 +9,19 @@ const Header = () => {
           align="center"
           justify="center"
           gap={{ base: "24px", md: "54px" }}
-          p={{ base: 4, md: 7 }}
+          p={{ base: 2, md: 7 }}
           bg="rgba(235,235,235,0.93)"
         >
-          <ContactBtn name="Appeler" img="img/CallBtn.svg" />
+          <ContactBtn name="Appeler" img="img/CallBtn.svg" href="tel:0763100692" />
 
-          <Image
+          <Img
             src="img/logo.png"
             alt="Logo Démolplus Sàrl"
             w={{ base: "160px", md: "260px" }}
             bg="transparent"
           />
 
-          <ContactBtn name="Email" img="img/MailBtn.svg" />
+          <ContactBtn name="Email" img="img/MailBtn.svg" href="mailto: info@demolplus.ch"/>
         </Flex>
 
         <Box w="100%" h="2px" bgColor="black" />
