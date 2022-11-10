@@ -82,6 +82,15 @@ const AvantApresImage = (props) => {
               m="auto"
               display={imageDisplayStatus}
               onLoad={loadImage}
+              bg="transparent"
+              p={4}
+            />
+            <Commands
+              image={image}
+              image1={image1}
+              image2={image2}
+              loadImage1={loadImage1}
+              loadImage2={loadImage2}
             />
           </ModalBody>
         </ModalContent>
@@ -103,46 +112,57 @@ const AvantApresImage = (props) => {
           onClick={onOpen}
           _hover={{ cursor: "pointer" }}
         />
-
-        <Flex
-          bg="transparent"
-          justify="space-between"
-          mt={{ base: 2, md: 4 }}
-          px={{ base: 2, sm: 8, md: 4 }}
-        >
-          <Button
-            color={image === image1 ? "#fff" : "#727272"}
-            bg="transparent"
-            fontSize={{ base: "18px", md: "22px" }}
-            letterSpacing="2px"
-            onClick={loadImage1}
-            rounded="none"
-            border="none"
-            outline="none"
-            _hover={{ bg: "#535959" }}
-            _active={{ outline: "none", border: "none" }}
-            _focus={{ outline: "none", border: "none" }}
-          >
-            Avant
-          </Button>
-          <Button
-            color={image === image2 ? "#fff" : "#727272"}
-            bg="transparent"
-            fontSize={{ base: "18px", md: "22px" }}
-            letterSpacing="2px"
-            onClick={loadImage2}
-            rounded="none"
-            border="none"
-            outline="none"
-            _hover={{ bg: "#535959" }}
-            _active={{ outline: "none", border: "none" }}
-            _focus={{ outline: "none", border: "none" }}
-          >
-            Après
-          </Button>
-        </Flex>
+        <Commands
+          image={image}
+          image1={image1}
+          image2={image2}
+          loadImage1={loadImage1}
+          loadImage2={loadImage2}
+        />
       </Box>
     </>
+  );
+};
+
+const Commands = (props) => {
+  return (
+    <Flex
+      bg="transparent"
+      justify="space-evenly"
+      mt={{ base: 2, md: 4 }}
+      px={{ base: 2, sm: 8, md: 4 }}
+    >
+      <Button
+        color={props.image === props.image1 ? "#fff" : "#727272"}
+        bg="transparent"
+        fontSize={{ base: "18px", md: "22px" }}
+        letterSpacing="2px"
+        onClick={props.loadImage1}
+        rounded="none"
+        border="none"
+        outline="none"
+        _hover={{ bg: "#535959" }}
+        _active={{ outline: "none", border: "none" }}
+        _focus={{ outline: "none", border: "none" }}
+      >
+        Avant
+      </Button>
+      <Button
+        color={props.image === props.image2 ? "#fff" : "#727272"}
+        bg="transparent"
+        fontSize={{ base: "18px", md: "22px" }}
+        letterSpacing="2px"
+        onClick={props.loadImage2}
+        rounded="none"
+        border="none"
+        outline="none"
+        _hover={{ bg: "#535959" }}
+        _active={{ outline: "none", border: "none" }}
+        _focus={{ outline: "none", border: "none" }}
+      >
+        Après
+      </Button>
+    </Flex>
   );
 };
 

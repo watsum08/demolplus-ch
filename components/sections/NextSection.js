@@ -1,10 +1,14 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
-import { TriangleDownIcon } from "@chakra-ui/icons"
+import {
+  Box,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
+import { TriangleDownIcon } from "@chakra-ui/icons";
 
-import AvantApresImage from "../AvantApresImage";
 import PageContainer from "../UI/PageContainer";
 import SectionLabel from "../UI/SectionLabel";
 import ContactForm from "../ContactForm";
+import AAImages from "../AAImages";
 
 const NextSection = () => {
   return (
@@ -16,39 +20,18 @@ const NextSection = () => {
           color="#fff"
           fontSize={{ base: "20px", md: "22px" }}
           fontWeight={300}
-          mt={8}
+          mt={10}
           textAlign={{ base: "center", md: "left" }}
           ml={{ base: 0, md: 6 }}
         >
           Démolition d'une salle de bain
         </Box>
-        <Flex
-          bg="transparent"
-          justify="space-evenly"
-          mt={6}
-          flexDir={{ base: "column", lg: "row" }}
-        >
-          <AvantApresImage
-            avant="img/realisations/avant1.jpeg"
-            apres="img/realisations/apres1.jpeg"
-            name="Démolition d'une salle de bain"
-          />
-          <AvantApresImage
-            avant="img/realisations/avant2.jpeg"
-            apres="img/realisations/apres2.jpeg"
-            name="Démolition d'une salle de bain"
-          />
-          <AvantApresImage
-            avant="img/realisations/avant3.jpeg"
-            apres="img/realisations/apres3.jpeg"
-            name="Démolition d'une salle de bain"
-          />
-        </Flex>
+        <AAImages />
       </ContentSection>
 
       <ContentSection last>
         <SectionLabel text="Contactez-nous" />
-        <Box bg="transparent" w={{ base: "100%", md: "75%" }} m="auto" mt={8}>
+        <Box bg="transparent" w={{ base: "100%", md: "75%" }} m="auto" mt={10}>
           <Heading
             as="h3"
             bg="transparent"
@@ -83,7 +66,13 @@ const NextSection = () => {
           <Box bg="transparent" color="#fff" mt={6} fontWeight={400}>
             Pour toutes questions ou demandes de devis, contactez-nous
             directement grâce au formulaire ci-dessous
-            <TriangleDownIcon color="#fff" bg="transparent" w="12px" ml={3} pb="2px"/>
+            <TriangleDownIcon
+              color="#fff"
+              bg="transparent"
+              w="12px"
+              ml={3}
+              pb="2px"
+            />
           </Box>
 
           <ContactForm />
