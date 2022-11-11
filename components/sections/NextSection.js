@@ -3,7 +3,6 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { TriangleDownIcon } from "@chakra-ui/icons";
 
 import PageContainer from "../UI/PageContainer";
 import SectionLabel from "../UI/SectionLabel";
@@ -63,18 +62,6 @@ const NextSection = () => {
               fornaymarc92@gmail.com
             </Text>
           </address>
-          <Box bg="transparent" color="#fff" mt={6} fontWeight={400}>
-            Pour toutes questions ou demandes de devis, contactez-nous
-            directement grâce au formulaire ci-dessous
-            <TriangleDownIcon
-              color="#fff"
-              bg="transparent"
-              w="12px"
-              ml={3}
-              pb="2px"
-            />
-          </Box>
-
           <ContactForm />
         </Box>
       </ContentSection>
@@ -93,6 +80,7 @@ const ContentSection = (props) => {
       px={{ base: 6, sm: 8, md: 12 }}
       mb={props.last ? 0 : 12}
       mt={props.mt ?? 0}
+      transition="1s all"
     >
       {props.children}
     </Box>

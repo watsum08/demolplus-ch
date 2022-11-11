@@ -52,6 +52,7 @@ header {
   }
 }
 
+
 @media screen and (max-width: 47.9em) {
   @keyframes moveHeadingUp {
     from {
