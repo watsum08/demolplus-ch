@@ -1,7 +1,7 @@
 import { Box, List, ListItem, Img, Flex } from "@chakra-ui/react";
 import SectionLabel from "./SectionLabel";
 
-const cardOpacityDelay = 2.5;
+const cardOpacityDelay = 1.5;
 
 const GlassCard = (props) => {
   return (
@@ -11,7 +11,7 @@ const GlassCard = (props) => {
       bg="transparent"
       w={{ base: "90%", md: "fit-content" }}
       opacity={0}
-      animation={`fullOpacity 0.5s forwards ${cardOpacityDelay}s`}
+      animation={`fullOpacity 0.7s forwards ${cardOpacityDelay}s`}
     >
       <SectionLabel text="Nos services" />
       <Box h="auto" zIndex={100} bgColor="rgba(0, 0, 0, 0.7)" rounded="12px">
@@ -59,7 +59,7 @@ const GlassCard = (props) => {
 };
 
 const GlassCardItem = (props) => {
-  const delayInSeconds = 0.6;
+  const delayInSeconds = 0.3;
   return (
     <ListItem bg="transparent" mb={props.last ? 0 : props.gap}>
       <Flex
@@ -69,7 +69,7 @@ const GlassCardItem = (props) => {
         fontSize={{ base: "18px", lg: "22px" }}
         lineHeight="24px"
         opacity={0}
-        animation={`fullOpacity 0.6s forwards ${props.order * delayInSeconds + cardOpacityDelay + 0.6}s`}
+        animation={`fullOpacity 0.5s forwards ${props.order * delayInSeconds + cardOpacityDelay + 0.3}s`}
       >
         <Img
           src="img/GreenCheck.svg"

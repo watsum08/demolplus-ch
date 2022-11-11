@@ -60,7 +60,7 @@ const NextSection = () => {
               <br />
               076 310 06 92
               <br />
-              info@demolplus.ch
+              fornaymarc92@gmail.com
             </Text>
           </address>
           <Box bg="transparent" color="#fff" mt={6} fontWeight={400}>

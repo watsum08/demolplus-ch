@@ -21,7 +21,7 @@ const Header = () => {
             bg="transparent"
           />
 
-          <ContactBtn name="Email" img="img/MailBtn.svg" href="mailto: info@demolplus.ch"/>
+          <ContactBtn name="Email" img="img/MailBtn.svg" href="mailto:fornaymarc92@gmail.com"/>
         </Flex>
 
         <Box w="100%" h="2px" bgColor="black" />

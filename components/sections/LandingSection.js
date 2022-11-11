@@ -20,7 +20,7 @@ const LandingSection = () => {
       pos="fixed"
       mt={{ base: 28, sm: 32, md: 44 }}
       zIndex={100}
-      animation="zoomInAnimation 1s forwards 1.5s"
+      animation="zoomInAnimation 1s forwards 0.5s"
     >
       <Heading
         w="full"
@@ -35,7 +35,7 @@ const LandingSection = () => {
         bg="transparent"
         zIndex={100}
         lineHeight={{ base: "60px", md: "72px", xl: "92px" }}
-        animation={`moveHeadingUp 1s forwards 1.5s ease-out`}
+        animation={`moveHeadingUp 1s forwards 0.5s ease-out`}
       >
         Réalisez vos projets de démolition
       </Heading>
