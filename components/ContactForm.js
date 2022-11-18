@@ -18,6 +18,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
   const form = useRef();
+  const recaptchaRef = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -106,15 +107,35 @@ const ContactForm = () => {
           justify="space-between"
           flexDir={{ base: "column", md: "row" }}
         >
-          <FormControl bg="transparent" w={{ base: "100%", md: "48%" }} isRequired  mt={5}>
-            <FormLabel bg="transparent" textTransform="uppercase" m={1} requiredIndicator={false}>
+          <FormControl
+            bg="transparent"
+            w={{ base: "100%", md: "48%" }}
+            isRequired
+            mt={5}
+          >
+            <FormLabel
+              bg="transparent"
+              textTransform="uppercase"
+              m={1}
+              requiredIndicator={false}
+            >
               Nom* :
             </FormLabel>
             <Input type="text" rounded="none" name="user_nom" />
           </FormControl>
 
-          <FormControl bg="transparent" w={{ base: "100%", md: "48%" }} isRequired  mt={5}>
-            <FormLabel bg="transparent" textTransform="uppercase" m={1} requiredIndicator={false}>
+          <FormControl
+            bg="transparent"
+            w={{ base: "100%", md: "48%" }}
+            isRequired
+            mt={5}
+          >
+            <FormLabel
+              bg="transparent"
+              textTransform="uppercase"
+              m={1}
+              requiredIndicator={false}
+            >
               Prénom* :
             </FormLabel>
             <Input type="text" rounded="none" name="user_prenom" />
@@ -160,7 +181,12 @@ const ContactForm = () => {
         </FormControl>
 
         <FormControl bg="transparent" isRequired mt={5}>
-          <FormLabel bg="transparent" textTransform="uppercase" m={1} requiredIndicator={false}>
+          <FormLabel
+            bg="transparent"
+            textTransform="uppercase"
+            m={1}
+            requiredIndicator={false}
+          >
             Message* :
           </FormLabel>
           <Textarea
@@ -173,7 +199,8 @@ const ContactForm = () => {
 
         <Box bg="transparent" w="fit-content" mt={5}>
           <ReCAPTCHA
-            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            ref={recaptchaRef}
+            sitekey="6LfjPxkjAAAAALGg8DNscWlXshFMxyOjssD6O_mO"
             onChange={captchaValidate}
           />
         </Box>

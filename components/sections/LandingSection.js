@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Box, Heading, useBreakpoint } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import GlassCard from "../UI/GlassCard";
 
 const LandingSection = () => {
