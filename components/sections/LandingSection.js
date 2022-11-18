@@ -7,7 +7,7 @@ const LandingSection = () => {
     <Box
       w="full"
       h="1040px"
-      bgImage="img/landingimage.png"
+      bgImage="img/landingimage.jpg"
       bgRepeat="no-repeat"
       bgPos={{
         base: "50% 40%",
