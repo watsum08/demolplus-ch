@@ -197,11 +197,12 @@ const ContactForm = () => {
           />
         </FormControl>
 
-        <Box bg="transparent" w="fit-content" mt={5}>
+        <Box bg="transparent" w="0px" mt={5} transform={{ base: "scale(0.85)", md: "scale(1)" }}>
           <ReCAPTCHA
             ref={recaptchaRef}
             sitekey="6LfjPxkjAAAAALGg8DNscWlXshFMxyOjssD6O_mO"
             onChange={captchaValidate}
+            
           />
         </Box>
 

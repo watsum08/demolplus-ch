@@ -11,7 +11,8 @@ const Footer = () => {
         color="#fff"
         fontWeight={300}
         pos="relative"
-        top={{ base: 824, md: 1040 }}
+        top={{ base: 820, md: 1040 }}
+        fontSize="13px"
       >
         <Flex
           w="full"

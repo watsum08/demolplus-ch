@@ -11,7 +11,6 @@ const MainContent = () => {
       <Box
         bg="#1F2525"
         w={{ base: "fit-content", sm: "full" }}
-        outline="2px black"
         zIndex={300}
         pos="relative"
         top={{ base: 825, md: 1040 }}
