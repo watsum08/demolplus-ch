@@ -81,7 +81,7 @@ const ClickableImage = (props) => {
       </Modal>
       <AspectRatio
         w="full"
-        h={{ base: "280px", sm: "420px", md: "480px" }}
+        h={{ base: "280px", sm: "420px", md: "600px" }}
         ratio={1}
         onClick={onOpen}
         m="auto"

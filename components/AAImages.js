@@ -48,7 +48,13 @@ const AAImages = (props) => {
       flexDir={{ base: "column", lg: "row" }}
     >
       {isMobile ? (
-        <Flex align="center" justify="space-between" bg="transparent" gap="4%" mb={-12}>
+        <Flex
+          align="center"
+          justify="space-between"
+          bg="transparent"
+          gap="4%"
+          mb={-12}
+        >
           <IncDecButton
             onClick={decrementImgNum}
             disabled={displayedImgNum === 0}
@@ -63,7 +69,7 @@ const AAImages = (props) => {
           />
         </Flex>
       ) : (
-        aaImages
+        <Flex gap={{ base: 10, xl: 16, "2xl": 20 }}>{aaImages}</Flex>
       )}
     </Flex>
   );
