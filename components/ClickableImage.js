@@ -1,29 +1,18 @@
 import { CloseIcon } from "@chakra-ui/icons";
 import {
-  Img,
+  Image,
   Modal,
   ModalContent,
   ModalOverlay,
   ModalHeader,
   ModalBody,
   useDisclosure,
-  Spinner,
-  Box,
   AspectRatio,
 } from "@chakra-ui/react";
 
-import { useState } from "react";
 
 const ClickableImage = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [imageDisplayStatus, setImageDisplayStatus] = useState("none");
-  const [spinnerDisplayStatus, setSpinnerDisplayStatus] = useState("block");
-
-  const loadImage = () => {
-    setImageDisplayStatus("block");
-    setSpinnerDisplayStatus("none");
-  };
 
   return (
     <>
@@ -54,24 +43,17 @@ const ClickableImage = (props) => {
               right={7}
               color="white"
               bg="transparent"
+              _hover={{ cursor: "pointer" }}
             />
             <ModalBody bg="transparent" alignSelf="center">
-              <Spinner
-                color="white"
-                bg="transparent"
-                size="xl"
-                my={{ base: 128, md: 256 }}
-                display={spinnerDisplayStatus}
-              />
-              <Img
+              <Image
                 src={props.imgSrc}
                 alt={props.alt}
                 w="full"
                 h="auto"
                 transition="all 0.5s"
                 m="auto"
-                display={imageDisplayStatus}
-                onLoad={loadImage}
+                fallbackSrc="img/spinner.gif"
                 bg="transparent"
                 p={4}
               />
@@ -87,11 +69,12 @@ const ClickableImage = (props) => {
         m="auto"
         _hover={{ cursor: "pointer", border: "2px solid #999" }}
       >
-        <Img
+        <Image
           src={props.imgSrc}
           onClick={onOpen}
           alt={props.alt}
           h={props.imgH ?? "auto"}
+          fallbackSrc="img/spinner.gif"
         />
       </AspectRatio>
     </>

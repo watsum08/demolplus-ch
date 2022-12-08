@@ -1,4 +1,4 @@
-import { AspectRatio } from "@chakra-ui/react";
+import { AspectRatio, Image } from "@chakra-ui/react";
 
 import { CloseIcon } from "@chakra-ui/icons";
 import {
@@ -17,14 +17,6 @@ import { useState } from "react";
 
 const ClickableVideo = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [imageDisplayStatus, setImageDisplayStatus] = useState("none");
-  const [spinnerDisplayStatus, setSpinnerDisplayStatus] = useState("block");
-
-  const loadImage = () => {
-    setImageDisplayStatus("block");
-    setSpinnerDisplayStatus("none");
-  };
 
   return (
     <>
@@ -55,27 +47,20 @@ const ClickableVideo = (props) => {
               right={7}
               color="white"
               bg="transparent"
+              _hover={{ cursor: "pointer" }}
             />
             <ModalBody bg="transparent" alignSelf="center">
-              <Spinner
-                color="white"
-                bg="transparent"
-                size="xl"
-                my={{ base: 128, md: 256 }}
-                display={spinnerDisplayStatus}
-              />
               <AspectRatio
                 w={{ base: "270px", sm: "300px", md: "320px" }}
                 my={{ base: 0, sm: 1, md: 2, lg: 4 }}
                 h="full"
-                display={imageDisplayStatus}
                 ratio={0.525}
               >
                 <video
                   autoPlay="autoplay"
                   loop
-                  onLoadedData={loadImage}
                   controls
+                  poster="img/spinner.gif"
                 >
                   <source
                     src={props.videoSrc}
@@ -95,7 +80,7 @@ const ClickableVideo = (props) => {
         m="auto"
         _hover={{ cursor: "pointer", border: "2px solid #999" }}
       >
-        <video autoPlay="autoplay" loop muted>
+        <video autoPlay="autoplay" loop muted poster="img/spinner.gif">
           <source src={props.videoSrc} type={props.videoType ?? "video/mp4"} />
         </video>
       </AspectRatio>

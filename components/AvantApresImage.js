@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   Flex,
-  Img,
+  Image,
   Modal,
   ModalContent,
   ModalOverlay,
@@ -64,6 +64,7 @@ const AvantApresImage = (props) => {
             right={7}
             color="white"
             bg="transparent"
+            _hover={{ cursor: "pointer" }}
           />
           <ModalBody bg="transparent" alignSelf="center">
             <Spinner
@@ -73,7 +74,7 @@ const AvantApresImage = (props) => {
               my={{ base: 128, md: 256 }}
               display={spinnerDisplayStatus}
             />
-            <Img
+            <Image
               src={image}
               alt={props.name}
               w="full"
@@ -83,6 +84,7 @@ const AvantApresImage = (props) => {
               display={imageDisplayStatus}
               onLoad={loadImage}
               bg="transparent"
+              fallbackSrc="img/spinner.gif"
               p={4}
             />
             <Commands
@@ -96,12 +98,13 @@ const AvantApresImage = (props) => {
         </ModalContent>
       </Modal>
       <Box bg="transparent" w="fit-content" m="auto" mb={{ base: 12, lg: 0 }}>
-        <Img
+        <Image
           src={image}
           alt={props.name}
           w="full"
           h="auto"
           transition="all 0.5s"
+          fallbackSrc="img/spinner.gif"
           m="auto"
           onClick={onOpen}
           _hover={{ cursor: "pointer", border: "2px solid #999" }}

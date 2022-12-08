@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Image, Heading, AspectRatio } from "@chakra-ui/react";
 import GlassCard from "../UI/GlassCard";
 
 const LandingSection = () => {
@@ -7,20 +7,22 @@ const LandingSection = () => {
     <Box
       w="full"
       h="auto"
-      bgImage="img/landingimage.jpg"
-      bgRepeat="no-repeat"
-      bgPos={{
-        base: "50% 40%",
-        md: "50% 50%",
-        xl: "50% 60%",
-        "2xl": "50% 0",
-      }}
-      bgSize="clamp(600px, 320%, 1920px)"
+      bg="#ECECEC"
       overflowX="hidden"
       zIndex={100}
       animation="zoomInAnimation 1s forwards 0.5s"
       pt={{ base: "100px", sm: "120px", md: "200px" }}
+      pos="relative"
     >
+      <Image
+        src="img/landingimage.jpg"
+        alt="Image de bienvenue"
+        draggable={false}
+        zIndex={0}
+        pos="absolute"
+        bottom={0}
+      />
+
       <Heading
         w="full"
         as="h1"
@@ -32,7 +34,8 @@ const LandingSection = () => {
         color="#F34949"
         textShadow="-1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;"
         bg="transparent"
-        zIndex={100}
+        zIndex={300}
+        pos="relative"
         lineHeight={{ base: "60px", md: "72px", xl: "92px" }}
         animation={`moveHeadingUp 1s forwards 0.5s ease-out`}
       >

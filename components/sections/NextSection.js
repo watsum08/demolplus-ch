@@ -113,7 +113,7 @@ const NextSection = () => {
 
   return (
     <PageContainer bg="#262525">
-      <ContentSection mt={12}>
+      <ContentSection mt={6}>
         <SectionLabel text="Nos réalisations" />
         <Box
           bg="transparent"
@@ -158,7 +158,12 @@ const NextSection = () => {
           {contentRomont.map((e) => (
             <Box w="350px" h="auto" m="auto" key={e.id}>
               {e.type !== "video/mp4" ? (
-                <ClickableImage imgSrc={e.src} alt={e.name} noCaption imgH="480px" />
+                <ClickableImage
+                  imgSrc={e.src}
+                  alt={e.name}
+                  noCaption
+                  imgH="480px"
+                />
               ) : (
                 <ClickableVideo videoSrc={e.src} name={e.name} noCaption />
               )}
