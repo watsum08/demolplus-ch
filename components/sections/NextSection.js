@@ -118,11 +118,11 @@ const NextSection = () => {
         <Box
           bg="transparent"
           color="#fff"
-          fontSize={{ base: "20px", md: "22px" }}
-          fontWeight={300}
+          fontSize={{ base: "20px", md: "22px", lg: "24px" }}
+          fontWeight={400}
           mt={14}
-          mb={10}
-          textAlign={{ base: "center", md: "left" }}
+          mb={12}
+          textAlign="center"
           ml={{ base: 0, md: 6 }}
         >
           Démolition d&apos;une salle de bain
@@ -134,12 +134,12 @@ const NextSection = () => {
         <Box
           bg="transparent"
           color="#fff"
-          fontSize={{ base: "20px", md: "22px" }}
-          fontWeight={300}
+          fontSize={{ base: "20px", md: "22px", lg: "24px" }}
+          fontWeight={400}
           mt={14}
-          textAlign={{ base: "center", md: "left" }}
+          textAlign="center"
           ml={{ base: 0, md: 6 }}
-          mb={10}
+          mb={12}
         >
           Évacuation de chantier à Romont
         </Box>
@@ -158,9 +158,9 @@ const NextSection = () => {
           {contentRomont.map((e) => (
             <Box w="350px" h="auto" m="auto" key={e.id}>
               {e.type !== "video/mp4" ? (
-                <ClickableImage imgSrc={e.src} alt={e.name} imgH="480px" />
+                <ClickableImage imgSrc={e.src} alt={e.name} noCaption imgH="480px" />
               ) : (
-                <ClickableVideo videoSrc={e.src} name={e.name} />
+                <ClickableVideo videoSrc={e.src} name={e.name} noCaption />
               )}
             </Box>
           ))}

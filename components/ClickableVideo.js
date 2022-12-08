@@ -46,7 +46,7 @@ const ClickableVideo = (props) => {
               pb={0}
               color="white"
             >
-              {props.name}
+              {props.noCaption !== true ? props.name : ""}
             </ModalHeader>
             <CloseIcon
               onClick={onClose}
@@ -89,10 +89,11 @@ const ClickableVideo = (props) => {
       </Modal>
       <AspectRatio
         w="full"
-        h={{ base: "280px", sm: "420px", md: "480px" }}
+        h={{ base: "280px", sm: "420px", md: "600px", lg: "480px" }}
         ratio={1}
         onClick={onOpen}
         m="auto"
+        _hover={{ cursor: "pointer", border: "2px solid #999" }}
       >
         <video autoPlay="autoplay" loop muted>
           <source src={props.videoSrc} type={props.videoType ?? "video/mp4"} />

@@ -104,7 +104,7 @@ const AvantApresImage = (props) => {
           transition="all 0.5s"
           m="auto"
           onClick={onOpen}
-          _hover={{ cursor: "pointer" }}
+          _hover={{ cursor: "pointer", border: "2px solid #999" }}
         />
         <Commands
           image={image}

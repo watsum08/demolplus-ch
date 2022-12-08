@@ -45,7 +45,7 @@ const ClickableImage = (props) => {
               pb={0}
               color="white"
             >
-              {props.alt}
+              {props.noCaption !== true ? props.alt : ""}
             </ModalHeader>
             <CloseIcon
               onClick={onClose}
@@ -81,10 +81,11 @@ const ClickableImage = (props) => {
       </Modal>
       <AspectRatio
         w="full"
-        h={{ base: "280px", sm: "420px", md: "600px" }}
+        h={{ base: "280px", sm: "420px", md: "600px", lg: "480px" }}
         ratio={1}
         onClick={onOpen}
         m="auto"
+        _hover={{ cursor: "pointer", border: "2px solid #999" }}
       >
         <Img
           src={props.imgSrc}

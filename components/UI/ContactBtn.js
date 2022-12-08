@@ -3,11 +3,16 @@ import { Text, Tag, TagLabel, Img, Link } from "@chakra-ui/react";
 const ContactBtn = (props) => {
   return (
     <Tag bg="transparent">
-      <Link pt={3} bg="transparent" href={props.href}>
+      <Link
+        pt={3}
+        bg="transparent"
+        href={props.href}
+        _hover={{ textDecoration: "none", fontWeight: 600 }}
+      >
         <Img
           src={props.img}
           alt={props.name}
-          w={{ base: "48px", md: "72px"}}
+          w={{ base: "48px", md: "72px" }}
           m="auto"
           mb={{ base: 2, md: 3 }}
           bg="transparent"

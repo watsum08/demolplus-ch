@@ -13,13 +13,15 @@ const GlassCard = (props) => {
       opacity={0}
       animation={`fullOpacity 0.7s forwards ${cardOpacityDelay}s`}
     >
-      <SectionLabel text="Nos services" />
+      
       <Box h="auto" zIndex={100} bgColor="rgba(0, 0, 0, 0.7)" rounded="12px">
+      <SectionLabel text="Nos services" p={props.gap} mb={-6}/>
         <List bg="transparent" p={props.gap}>
           <GlassCardItem
             gap={props.gap}
             text="Démontages de galandages, murs intérieurs et parois"
             order={1}
+            first
           />
           <GlassCardItem
             gap={props.gap}
@@ -61,7 +63,7 @@ const GlassCard = (props) => {
 const GlassCardItem = (props) => {
   const delayInSeconds = 0.3;
   return (
-    <ListItem bg="transparent" mb={props.last ? 0 : props.gap}>
+    <ListItem bg="transparent" mb={props.last ? 0 : props.gap} mt={props.first ? 0 : props.gap}>
       <Flex
         bg="transparent"
         align="center"
