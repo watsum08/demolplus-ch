@@ -81,7 +81,7 @@ const ClickableVideo = (props) => {
         _hover={{ cursor: "pointer", border: "2px solid #999" }}
       >
         <video autoPlay="autoplay" loop muted poster="img/spinner.gif">
-          <source src={props.videoSrc} type={props.videoType ?? "video/mp4"} />
+          <source src={props.videoSrc} type={props.videoType ?? "video/mp4"}/>
         </video>
       </AspectRatio>
     </>

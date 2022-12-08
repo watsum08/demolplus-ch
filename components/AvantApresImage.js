@@ -10,7 +10,6 @@ import {
   ModalHeader,
   ModalBody,
   useDisclosure,
-  Spinner,
 } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -28,14 +27,6 @@ const AvantApresImage = (props) => {
   };
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [imageDisplayStatus, setImageDisplayStatus] = useState("none");
-  const [spinnerDisplayStatus, setSpinnerDisplayStatus] = useState("block");
-
-  const loadImage = () => {
-    setImageDisplayStatus("block");
-    setSpinnerDisplayStatus("none");
-  };
 
   return (
     <>
@@ -67,13 +58,6 @@ const AvantApresImage = (props) => {
             _hover={{ cursor: "pointer" }}
           />
           <ModalBody bg="transparent" alignSelf="center">
-            <Spinner
-              color="white"
-              bg="transparent"
-              size="xl"
-              my={{ base: 128, md: 256 }}
-              display={spinnerDisplayStatus}
-            />
             <Image
               src={image}
               alt={props.name}
@@ -81,11 +65,10 @@ const AvantApresImage = (props) => {
               h="auto"
               transition="all 0.5s"
               m="auto"
-              display={imageDisplayStatus}
-              onLoad={loadImage}
               bg="transparent"
               fallbackSrc="img/spinner.gif"
               p={4}
+              loading="lazy"
             />
             <Commands
               image={image}
@@ -108,6 +91,7 @@ const AvantApresImage = (props) => {
           m="auto"
           onClick={onOpen}
           _hover={{ cursor: "pointer", border: "2px solid #999" }}
+          loading="lazy"
         />
         <Commands
           image={image}
