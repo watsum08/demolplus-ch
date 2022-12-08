@@ -8,15 +8,7 @@ const MainContent = () => {
     <main>
       <LandingSection />
 
-      <Box
-        bg="#1F2525"
-        w={{ base: "fit-content", sm: "full" }}
-        zIndex={300}
-        pos="relative"
-        top={{ base: 825, md: 1040 }}
-      >
-        <NextSection />
-      </Box>
+      <NextSection />
     </main>
   );
 };

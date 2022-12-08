@@ -99,13 +99,7 @@ const AvantApresImage = (props) => {
         <Img
           src={image}
           alt={props.name}
-          w={{
-            base: "240px",
-            sm: "360px",
-            md: "400px",
-            lg: "260px",
-            xl: "350px",
-          }}
+          w="full"
           h="auto"
           transition="all 0.5s"
           m="auto"
@@ -130,7 +124,7 @@ const Commands = (props) => {
       bg="transparent"
       justify="space-evenly"
       mt={{ base: 2, md: 4 }}
-      px={{ base: 2, sm: 8, md: 4 }}
+      px={{ base: 0, sm: 8, md: 4 }}
     >
       <Button
         color={props.image === props.image1 ? "#fff" : "#727272"}

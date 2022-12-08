@@ -6,21 +6,20 @@ const LandingSection = () => {
   return (
     <Box
       w="full"
-      h="1040px"
+      h="auto"
       bgImage="img/landingimage.jpg"
       bgRepeat="no-repeat"
       bgPos={{
         base: "50% 40%",
         md: "50% 50%",
         xl: "50% 60%",
-        "2xl": "50% 50%",
+        "2xl": "50% 0",
       }}
       bgSize="clamp(600px, 320%, 1920px)"
       overflowX="hidden"
-      pos="fixed"
-      mt={{ base: 28, sm: 32, md: 44 }}
       zIndex={100}
       animation="zoomInAnimation 1s forwards 0.5s"
+      pt={{ base: "100px", sm: "120px", md: "200px" }}
     >
       <Heading
         w="full"

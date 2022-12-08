@@ -3,7 +3,7 @@ import ContactBtn from "./UI/ContactBtn";
 
 const Header = () => {
   return (
-    <Box pos="fixed" zIndex={500} w="full" bg="transparent">
+    <Box zIndex={500} w="full" bg="transparent" pos="fixed">
       <header style={{ background: "transparent"}}>
         <Flex
           align="center"
