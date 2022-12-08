@@ -68,7 +68,6 @@ const AvantApresImage = (props) => {
               bg="transparent"
               fallbackSrc="img/spinner.gif"
               p={4}
-              loading="lazy"
             />
             <Commands
               image={image}
@@ -91,7 +90,6 @@ const AvantApresImage = (props) => {
           m="auto"
           onClick={onOpen}
           _hover={{ cursor: "pointer", border: "2px solid #999" }}
-          loading="lazy"
         />
         <Commands
           image={image}

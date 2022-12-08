@@ -75,7 +75,6 @@ const ClickableImage = (props) => {
           alt={props.alt}
           h={props.imgH ?? "auto"}
           fallbackSrc="img/spinner.gif"
-          loading="lazy"
         />
       </AspectRatio>
     </>
